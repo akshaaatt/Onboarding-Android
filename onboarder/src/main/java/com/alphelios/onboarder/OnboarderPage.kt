@@ -19,5 +19,4 @@ class OnboarderPage @JvmOverloads constructor(
         var titleTextSize: Float = 0f,
         var descriptionTextSize: Float = 0f,
         var isMultilineDescriptionCentered: Boolean = false,
-        @ColorRes var activeIndicatorColor: Int = R.color.active_indicator
 )

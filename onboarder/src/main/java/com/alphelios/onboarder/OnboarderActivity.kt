@@ -14,7 +14,7 @@ import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.alphelios.onboarder.databinding.ActivityOnboarderBinding
 import java.util.ArrayList
 
-abstract class OnboarderActivity : AppCompatActivity(), View.OnClickListener {
+class OnboarderActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var colors: Array<Int>
     private var evaluator: ArgbEvaluator? = null
@@ -154,11 +154,13 @@ abstract class OnboarderActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    protected open fun onSkipButtonPressed() {
+    fun onSkipButtonPressed() {
         binding.vpOnboarderPager.currentItem = onboarderAdapter!!.count
     }
 
-    abstract fun onFinishButtonPressed()
+    fun onFinishButtonPressed(){
+
+    }
 
     fun getPageBackgroundColors(context: Context?, pages: List<OnboarderPage>): Array<Int> {
         val colorsList: MutableList<Int> = ArrayList()

@@ -2,11 +2,12 @@ package com.alphelios.onboarding
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.alphelios.onboarder.OnboarderActivity
 import com.alphelios.onboarder.OnboarderPage
 import java.util.*
 
-class IntroActivity : OnboarderActivity() {
+class IntroActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +17,6 @@ class IntroActivity : OnboarderActivity() {
                 "Our lovely pale blue dot",
                 resourceId = R.raw.trophy,
                 isLottie = true,
-                activeIndicatorColor = R.color.colorAccent
         )
 
         val onboarderPage2 = OnboarderPage(
@@ -45,19 +45,12 @@ class IntroActivity : OnboarderActivity() {
             page.descriptionColor = R.color.secondary_text
             page.isMultilineDescriptionCentered = true
         }
-        setSkipButtonTitle("Skip")
-        setFinishButtonTitle("Finish")
-        setOnboardPagesReady(pages)
+
+        val onboarderActivity = OnboarderActivity()
+        onboarderActivity.setSkipButtonTitle("Skip")
+        onboarderActivity.setFinishButtonTitle("Finish")
+        onboarderActivity.setOnboardPagesReady(pages)
 //        setActiveIndicatorColor(R.color.white)
 //        setInactiveIndicatorColor(R.color.colorAccent)
-    }
-
-    public override fun onSkipButtonPressed() {
-        super.onSkipButtonPressed()
-        Toast.makeText(this, "Skip button was pressed!", Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onFinishButtonPressed() {
-        Toast.makeText(this, "Finish button was pressed", Toast.LENGTH_SHORT).show()
     }
 }
