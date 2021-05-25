@@ -1,2 +1,0 @@
-com/limerse/onboard/BuildConfig.java
- com.limerse.onboard.BuildConfig
