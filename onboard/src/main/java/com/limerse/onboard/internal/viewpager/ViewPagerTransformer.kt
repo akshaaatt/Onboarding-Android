@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.viewpager.widget.ViewPager
 import com.limerse.onboard.OnboardPageTransformerType
 import com.limerse.onboard.R
+import kotlin.math.abs
+import kotlin.math.max
 
 private const val MIN_SCALE_DEPTH = 0.75f
 private const val MIN_SCALE_ZOOM = 0.85f
@@ -73,13 +75,13 @@ internal class ViewPagerTransformer(
         } else {
             // position is between -1.0F & 0.0F OR 0.0F & 1.0F
             page.translationX = page.width * -position
-            page.alpha = 1.0f - Math.abs(position)
+            page.alpha = 1.0f - abs(position)
         }
     }
 
     private fun transformZoom(position: Float, page: View) {
         if (position >= -1 && position <= 1) {
-            page.scaleXY = Math.max(MIN_SCALE_ZOOM, 1 - Math.abs(position))
+            page.scaleXY = max(MIN_SCALE_ZOOM, 1 - abs(position))
             page.alpha = MIN_ALPHA_ZOOM + (page.scaleXY - MIN_SCALE_ZOOM) /
                 (1 - MIN_SCALE_ZOOM) * (1 - MIN_ALPHA_ZOOM)
             val vMargin = page.height * (1 - page.scaleXY) / 2
@@ -98,7 +100,7 @@ internal class ViewPagerTransformer(
         if (position > 0 && position < 1) {
             // moving to the right
             page.alpha = 1 - position
-            page.scaleXY = MIN_SCALE_DEPTH + (1 - MIN_SCALE_DEPTH) * (1 - Math.abs(position))
+            page.scaleXY = MIN_SCALE_DEPTH + (1 - MIN_SCALE_DEPTH) * (1 - abs(position))
             page.translationX = page.width * -position
         } else {
             page.transformDefaults()
@@ -108,8 +110,8 @@ internal class ViewPagerTransformer(
     private fun transformSlideOver(position: Float, page: View) {
         if (position < 0 && position > -1) {
             // this is the page to the left
-            page.scaleXY = Math.abs(Math.abs(position) - 1) * (1.0f - SCALE_FACTOR_SLIDE) + SCALE_FACTOR_SLIDE
-            page.alpha = Math.max(MIN_ALPHA_SLIDE, 1 - Math.abs(position))
+            page.scaleXY = abs(abs(position) - 1) * (1.0f - SCALE_FACTOR_SLIDE) + SCALE_FACTOR_SLIDE
+            page.alpha = max(MIN_ALPHA_SLIDE, 1 - abs(position))
             val pageWidth = page.width
             val translateValue = position * -pageWidth
             if (translateValue > -pageWidth) {

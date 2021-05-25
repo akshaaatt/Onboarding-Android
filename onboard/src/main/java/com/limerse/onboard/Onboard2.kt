@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 
 abstract class Onboard2 : com.limerse.onboard.OnboardBase() {
 
-    override val layoutId = R.layout.appintro_intro_layout2
+    override val layoutId = R.layout.onboard_intro_layout2
 
     @IdRes
     var backgroundResource: Int? = null

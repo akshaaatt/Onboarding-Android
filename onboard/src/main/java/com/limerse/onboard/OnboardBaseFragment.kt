@@ -4,6 +4,8 @@ import android.graphics.drawable.Animatable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -11,6 +13,7 @@ import androidx.annotation.ColorInt
 import androidx.annotation.LayoutRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import com.airbnb.lottie.LottieAnimationView
 import com.limerse.onboard.internal.LogHelper
 import com.limerse.onboard.internal.TypefaceContainer
 
@@ -25,6 +28,7 @@ internal const val ARG_BG_COLOR = "bg_color"
 internal const val ARG_TITLE_COLOR = "title_color"
 internal const val ARG_DESC_COLOR = "desc_color"
 internal const val ARG_BG_DRAWABLE = "bg_drawable"
+internal const val IS_LOTTIE = "is_lottie"
 
 abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBackgroundColorHolder {
 
@@ -43,6 +47,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
 
     private var title: String? = null
     private var description: String? = null
+    private var isLottie: Boolean = false
     private var titleTypeface: TypefaceContainer? = null
     private var descTypeface: TypefaceContainer? = null
 
@@ -56,6 +61,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
             title = args.getString(ARG_TITLE)
             description = args.getString(ARG_DESC)
             bgDrawable = args.getInt(ARG_BG_DRAWABLE)
+            isLottie = args.getBoolean(IS_LOTTIE)
 
             val argsTitleTypeface = args.getString(ARG_TITLE_TYPEFACE)
             val argsDescTypeface = args.getString(ARG_DESC_TYPEFACE)
@@ -77,6 +83,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
             drawable = savedInstanceState.getInt(ARG_DRAWABLE)
             title = savedInstanceState.getString(ARG_TITLE)
             description = savedInstanceState.getString(ARG_DESC)
+            isLottie = savedInstanceState.getBoolean(IS_LOTTIE)
 
             titleTypeface = TypefaceContainer(
                 savedInstanceState.getString(ARG_TITLE_TYPEFACE),
@@ -104,6 +111,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
         val descriptionText = view.findViewById<TextView>(R.id.description)
         val slideImage = view.findViewById<ImageView>(R.id.image)
         val mainLayout = view.findViewById<ConstraintLayout>(R.id.main)
+        val animationView = view.findViewById<LottieAnimationView>(R.id.animation_view)
 
         titleText.text = title
         descriptionText.text = description
@@ -113,10 +121,16 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
         if (descColor != 0) {
             descriptionText.setTextColor(descColor)
         }
+        if(isLottie){
+            slideImage.visibility = GONE
+            animationView.visibility = VISIBLE
+        }
+        else{
+            slideImage.setImageResource(drawable)
+        }
         titleTypeface?.applyTo(titleText)
         descTypeface?.applyTo(descriptionText)
 
-        slideImage.setImageResource(drawable)
         if (bgDrawable != 0) {
             mainLayout?.setBackgroundResource(bgDrawable)
         } else {

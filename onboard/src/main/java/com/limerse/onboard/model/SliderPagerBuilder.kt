@@ -16,7 +16,7 @@ class SliderPagerBuilder {
     private var description: CharSequence? = null
 
     @DrawableRes
-    private var imageDrawable: Int = 0
+    private var resourceId: Int = 0
 
     @ColorInt
     private var backgroundColor: Int = 0
@@ -50,8 +50,8 @@ class SliderPagerBuilder {
         return this
     }
 
-    fun imageDrawable(@DrawableRes imageDrawable: Int): SliderPagerBuilder {
-        this.imageDrawable = imageDrawable
+    fun resourceId(@DrawableRes resourceId: Int): SliderPagerBuilder {
+        this.resourceId = resourceId
         return this
     }
 
@@ -98,7 +98,7 @@ class SliderPagerBuilder {
     fun build() = SliderPage(
         title = this.title,
         description = this.description,
-        imageDrawable = this.imageDrawable,
+        resourceId = this.resourceId,
         backgroundColor = this.backgroundColor,
         titleColor = this.titleColor,
         descriptionColor = this.descriptionColor,

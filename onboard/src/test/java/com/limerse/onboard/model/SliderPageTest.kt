@@ -10,7 +10,7 @@ class SliderPageTest {
     fun sliderPage_correctParametersAreAssigned() {
         val title = "Title"
         val description = "Description"
-        val imageDrawable = 0x7f020000
+        val resourceId = 0x7f020000
         val bgColor = Color.GRAY
         val titleColor = Color.WHITE
         val descColor = Color.BLACK
@@ -22,7 +22,7 @@ class SliderPageTest {
         val sliderPage = SliderPage(
             title = title,
             description = description,
-            imageDrawable = imageDrawable,
+            resourceId = resourceId,
             backgroundColor = bgColor,
             titleColor = titleColor,
             descriptionColor = descColor,
@@ -34,7 +34,7 @@ class SliderPageTest {
 
         assertEquals(sliderPage.title, title)
         assertEquals(sliderPage.description, description)
-        assertEquals(sliderPage.imageDrawable, imageDrawable)
+        assertEquals(sliderPage.resourceId, resourceId)
         assertEquals(sliderPage.backgroundColor, bgColor)
         assertEquals(sliderPage.titleColor, titleColor)
         assertEquals(sliderPage.descriptionColor, descColor)
@@ -50,7 +50,7 @@ class SliderPageTest {
 
         assertEquals(sliderPage.title, null)
         assertEquals(sliderPage.description, null)
-        assertEquals(sliderPage.imageDrawable, 0)
+        assertEquals(sliderPage.resourceId, 0)
         assertEquals(sliderPage.backgroundColor, 0)
         assertEquals(sliderPage.titleColor, 0)
         assertEquals(sliderPage.descriptionColor, 0)

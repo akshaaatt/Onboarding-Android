@@ -22,7 +22,7 @@ class DotIndicatorController(context: Context) : IndicatorController, LinearLayo
             selectPosition(currentPosition)
         }
 
-    override var unselectedIndicatorColor = ContextCompat.getColor(context, R.color.onboard_default_selected_color)
+    override var unselectedIndicatorColor = ContextCompat.getColor(context, R.color.onboard_default_unselected_color)
         set(value) {
             field = value
             selectPosition(currentPosition)

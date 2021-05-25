@@ -21,16 +21,31 @@
         app:layout_constraintVertical_chainStyle="spread"
         tools:text="Welcome" />
 
-    <ImageView
-        android:id="@+id/image"
-        style="@style/OnboardDefaultImage"
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:contentDescription="@string/app_intro_image_content_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/midline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            style="@style/OnboardDefaultImage"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/onboard_image_content_description" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/compass" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/description"

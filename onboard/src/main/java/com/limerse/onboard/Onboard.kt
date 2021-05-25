@@ -14,7 +14,7 @@ import com.limerse.onboard.internal.TypefaceContainer
 
 abstract class Onboard : com.limerse.onboard.OnboardBase() {
 
-    override val layoutId = R.layout.appintro_intro_layout
+    override val layoutId = R.layout.onboard_intro_layout
 
     /**
      * Override viewpager bar color

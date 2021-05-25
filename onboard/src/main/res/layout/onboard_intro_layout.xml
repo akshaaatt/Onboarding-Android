@@ -40,8 +40,8 @@
     <Button
         android:id="@+id/skip"
         style="@style/OnboardButtonStyleCompat"
-        android:labelFor="@string/app_intro_skip_button"
-        android:text="@string/app_intro_skip_button"
+        android:labelFor="@string/onboard_skip_button"
+        android:text="@string/onboard_skip_button"
         android:textSize="@dimen/onboard_skiptext_size"
         android:textColor="@color/onboard_icon_tint"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
     <ImageButton
         android:id="@+id/back"
         style="@style/OnboardButtonStyleCompat"
-        android:contentDescription="@string/app_intro_back_button"
+        android:contentDescription="@string/onboard_back_button"
         android:rotation="180"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
     <ImageButton
         android:id="@+id/next"
         style="@style/OnboardButtonStyleCompat"
-        android:contentDescription="@string/app_intro_next_button"
+        android:contentDescription="@string/onboard_next_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom"
@@ -81,8 +81,8 @@
     <Button
         android:id="@+id/done"
         style="@style/OnboardButtonStyleCompat"
-        android:labelFor="@string/app_intro_done_button"
-        android:text="@string/app_intro_done_button"
+        android:labelFor="@string/onboard_done_button"
+        android:text="@string/onboard_done_button"
         android:textSize="@dimen/onboard_donetext_size"
         android:textColor="@color/onboard_icon_tint"
         android:visibility="gone"

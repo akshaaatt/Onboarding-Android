@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.FontRes
+import com.limerse.onboard.*
 import com.limerse.onboard.ARG_BG_COLOR
 import com.limerse.onboard.ARG_BG_DRAWABLE
 import com.limerse.onboard.ARG_DESC
@@ -15,6 +16,7 @@ import com.limerse.onboard.ARG_TITLE
 import com.limerse.onboard.ARG_TITLE_COLOR
 import com.limerse.onboard.ARG_TITLE_TYPEFACE
 import com.limerse.onboard.ARG_TITLE_TYPEFACE_RES
+import com.limerse.onboard.IS_LOTTIE
 
 /**
  * Slide Page Model.
@@ -24,7 +26,7 @@ import com.limerse.onboard.ARG_TITLE_TYPEFACE_RES
 data class SliderPage @JvmOverloads constructor(
     var title: CharSequence? = null,
     var description: CharSequence? = null,
-    @DrawableRes var imageDrawable: Int = 0,
+    @DrawableRes var resourceId: Int = 0,
     @ColorInt var backgroundColor: Int = 0,
     @ColorInt var titleColor: Int = 0,
     @ColorInt var descriptionColor: Int = 0,
@@ -32,7 +34,8 @@ data class SliderPage @JvmOverloads constructor(
     @FontRes var descriptionTypefaceFontRes: Int = 0,
     var titleTypeface: String? = null,
     var descriptionTypeface: String? = null,
-    @DrawableRes var backgroundDrawable: Int = 0
+    @DrawableRes var backgroundDrawable: Int = 0,
+    var isLottie: Boolean = false
 ) {
     val titleString: String? get() = title?.toString()
     val descriptionString: String? get() = description?.toString()
@@ -51,9 +54,10 @@ data class SliderPage @JvmOverloads constructor(
         newBundle.putString(ARG_DESC_TYPEFACE, this.descriptionTypeface)
         newBundle.putInt(ARG_DESC_TYPEFACE_RES, this.descriptionTypefaceFontRes)
         newBundle.putInt(ARG_DESC_COLOR, this.descriptionColor)
-        newBundle.putInt(ARG_DRAWABLE, this.imageDrawable)
+        newBundle.putInt(ARG_DRAWABLE, this.resourceId)
         newBundle.putInt(ARG_BG_COLOR, this.backgroundColor)
         newBundle.putInt(ARG_BG_DRAWABLE, this.backgroundDrawable)
+        newBundle.putBoolean(IS_LOTTIE, this.isLottie)
         return newBundle
     }
 }

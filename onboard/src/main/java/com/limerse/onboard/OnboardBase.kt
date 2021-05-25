@@ -402,15 +402,15 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
         skipButton = findViewById(R.id.skip) ?: error("Missing Skip button: R.id.skip")
         backButton = findViewById(R.id.back) ?: error("Missing Back button: R.id.back")
 
-        setTooltipText(nextButton, getString(R.string.app_intro_next_button))
+        setTooltipText(nextButton, getString(R.string.onboard_next_button))
         if (skipButton is ImageButton) {
-            setTooltipText(skipButton, getString(R.string.app_intro_skip_button))
+            setTooltipText(skipButton, getString(R.string.onboard_skip_button))
         }
         if (doneButton is ImageButton) {
-            setTooltipText(doneButton, getString(R.string.app_intro_done_button))
+            setTooltipText(doneButton, getString(R.string.onboard_done_button))
         }
         if (backButton is ImageButton) {
-            setTooltipText(backButton, getString(R.string.app_intro_back_button))
+            setTooltipText(backButton, getString(R.string.onboard_back_button))
         }
 
         if (isRtl) {
@@ -455,18 +455,11 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
         }
 
         pager.post {
-            val fragment = pagerAdapter.getItem(pager.currentItem)
-            // Fragment is null when no slides are passed to Onboard
-            if (fragment != null) {
-                dispatchSlideChangedCallbacks(
-                    null,
-                    pagerAdapter
-                        .getItem(pager.currentItem)
-                )
-            } else {
-                // Close the intro if there are no slides to show
-                finish()
-            }
+            dispatchSlideChangedCallbacks(
+                null,
+                pagerAdapter
+                    .getItem(pager.currentItem)
+            )
         }
     }
 

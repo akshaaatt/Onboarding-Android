@@ -8,7 +8,7 @@
     <dimen name="onboard2_fab_inset">16dp</dimen>
     <dimen name="onboard2_fab_size">88dp</dimen>
     <dimen name="onboard2_fab_bg_size">56dp</dimen>
-    <dimen name="Onboard2_fab_margin">1dp</dimen>
+    <dimen name="onboard2_fab_margin">1dp</dimen>
 
     <dimen name="onboard_button_margin">12dp</dimen>
     <dimen name="onboard_button_minheight">48dp</dimen>

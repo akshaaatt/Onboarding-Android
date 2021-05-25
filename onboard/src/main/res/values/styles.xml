@@ -18,7 +18,7 @@
         <item name="android:background">@drawable/ic_onboard_ripple</item>
         <item name="android:layout_height">@dimen/onboard2_fab_size</item>
         <item name="android:layout_width">@dimen/onboard2_fab_size</item>
-        <item name="android:layout_margin">@dimen/Onboard2_fab_margin</item>
+        <item name="android:layout_margin">@dimen/onboard2_fab_margin</item>
     </style>
 
     <style name="OnboardIndicatorContainer">
