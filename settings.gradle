@@ -1,1 +1,2 @@
-include ':onboarder', ':app'
+include ':app'
+include ':onboard'

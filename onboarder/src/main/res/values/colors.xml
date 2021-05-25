@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="white">#FAFAFA</color>
-    <color name="black_transparent">#14000000</color>
-    <color name="active_indicator">@color/white</color>
-    <color name="inactive_indicator">#4D000000</color>
-    <color name="transparent">#00ffffff</color>
-    <color name="purple">#34176b</color>
-</resources>
