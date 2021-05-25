@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_onboard_fab_background" />
+    <item
+        android:bottom="@dimen/onboard2_fab_inset"
+        android:drawable="@drawable/ic_onboard_skip"
+        android:left="@dimen/onboard2_fab_inset"
+        android:right="@dimen/onboard2_fab_inset"
+        android:top="@dimen/onboard2_fab_inset" />
+</layer-list>

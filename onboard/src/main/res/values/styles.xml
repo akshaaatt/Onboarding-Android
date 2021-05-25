@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OnboardStyle" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:background">@color/onboard_background_color</item>
+    </style>
+
+    <style name="OnboardButtonStyleCompat" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:minHeight">@dimen/onboard_button_minheight</item>
+        <item name="android:minWidth">@dimen/onboard_button_minwidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">@dimen/onboard_button_margin</item>
+    </style>
+
+    <style name="Onboard2ButtonStyleCompat" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/ic_onboard_ripple</item>
+        <item name="android:layout_height">@dimen/onboard2_fab_size</item>
+        <item name="android:layout_width">@dimen/onboard2_fab_size</item>
+        <item name="android:layout_margin">@dimen/Onboard2_fab_margin</item>
+    </style>
+
+    <style name="OnboardIndicatorContainer">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">@dimen/onboard_indicator_margin</item>
+    </style>
+
+    <style name="OnboardDefaultHeading" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">@color/onboard_title_color</item>
+        <item name="android:textSize">@dimen/onboard_headtext_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/onboard_head_padding</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">@dimen/onboard_headtext_size</item>
+        <item name="autoSizeMinTextSize">@dimen/onboard_min_text_size</item>
+        <item name="autoSizeStepGranularity">@dimen/onboard_text_granularity_size</item>
+    </style>
+
+    <style name="OnboardDefaultText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/onboard_desc_color</item>
+        <item name="android:textSize">@dimen/onboard_desctext_size</item>
+        <item name="android:padding">@dimen/onboard_desc_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="autoSizeMaxTextSize">@dimen/onboard_desctext_size</item>
+        <item name="autoSizeMinTextSize">@dimen/onboard_min_text_size</item>
+        <item name="autoSizeStepGranularity">@dimen/onboard_text_granularity_size</item>
+    </style>
+
+    <style name="OnboardDefaultImage">
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+</resources>

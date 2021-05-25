@@ -1,0 +1,27 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml:1:1-4:12
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml:1:1-4:12
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml:1:1-4:12
+	package
+		ADDED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml:2:5-34
+		INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+		INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml:1:1-4:12
+application
+ADDED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml:3:5-20
+uses-sdk
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+		ADDED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+		INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+		ADDED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml
+		INJECTED from F:\Projects\Libraries\Onboarding\onboard\src\main\AndroidManifest.xml

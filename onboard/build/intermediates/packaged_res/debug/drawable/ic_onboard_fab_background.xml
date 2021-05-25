@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/onboard_default_fab_background_color" />
+    <size
+        android:width="@dimen/onboard2_fab_bg_size"
+        android:height="@dimen/onboard2_fab_bg_size" />
+</shape>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="onboard_statusbar_color">#22000000</color>
+    <color name="onboard_background_color">#222222</color>
+    <color name="onboard_title_color">#FFFFFF</color>
+    <color name="onboard_desc_color">#FFFFFF</color>
+    <color name="onboard_separator_color">#22000000</color>
+    <color name="onboard_bar_color">@android:color/transparent</color>
+    <color name="onboard_default_fab_background_color">#59000000</color>
+    <color name="onboard_icon_tint">#FFFFFF</color>
+    <color name="onboard_default_selected_color">#22000000</color>
+    <color name="onboard_default_unselected_color">#FFFFFF</color>
+    <color name="onboard_navbar_color">#000000</color>
+    <color name="onboard_ripple_color">#1FFFFFFF</color>
+</resources>
