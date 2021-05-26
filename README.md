@@ -30,7 +30,7 @@ dependencies {
     implementation 'com.github.akshaaatt:Onboarding:1.0.0'
 }
 ```
-## Inspired by AppIntro(https://github.com/AppIntro/AppIntro)
+## Inspired by [AppIntro](https://github.com/AppIntro/AppIntro)
 
 ## Contribution
 
