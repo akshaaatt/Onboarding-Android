@@ -73,7 +73,7 @@ Also confirm that you're overriding onCreate with a single parameter (Bundle) an
 
 Finally, declare the activity in your Manifest like so:
 
-```
+``` xml
 <activity android:name="com.example.MyCustomOnboard"
     android:label="My Custom Onboard" />
 ```
