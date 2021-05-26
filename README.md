@@ -34,6 +34,7 @@ dependencies {
 
 To use Onboarder, you simply have to create a new Activity that extends OnboardAdvanced or OnboardLegacy like the following:
 
+```kotlin
 class MyCustomOnboarder : OnboardAdvanced() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,6 +64,7 @@ class MyCustomOnboarder : OnboardAdvanced() {
         finish()
     }
 }
+```
 
 Please note that you must NOT call setContentView. The OnboardAdvanced superclass is taking care of it for you.
 
@@ -75,7 +77,7 @@ Finally, declare the activity in your Manifest like so:
     
 We suggest to don't declare MyCustomOnboard as your first Activity unless you want the intro to launch every time your app starts. Ideally you should show the OnboardAdvanced activity only once to the user, and you should hide it once completed (you can use a flag in the SharedPreferences).
 
-## Inspired by [AppIntro](https://github.com/AppIntro/AppIntro)
+#### Inspired by [AppIntro](https://github.com/AppIntro/AppIntro)
 
 ## Contribution
 
