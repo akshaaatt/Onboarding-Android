@@ -1,3 +1,6 @@
+[![Screenshot-2021-05-26-23-40-20-876-com-limerse-onboarding.jpg](https://i.postimg.cc/3wK25pJJ/Screenshot-2021-05-26-23-40-20-876-com-limerse-onboarding.jpg)](https://postimg.cc/zycyTyg9)
+[![ezgif-com-gif-maker-1.gif](https://i.postimg.cc/yxqFGGD2/ezgif-com-gif-maker-1.gif)](https://postimg.cc/Q9b990kq)
+
 Onboarding is an Android library for easing up the onboarding process to Apps.
 
 ## Features
@@ -27,44 +30,7 @@ dependencies {
     implementation 'com.github.akshaaatt:Onboarding:1.0.0'
 }
 ```
-
-## Usage
-
-```kotlin
- val onboarderPage1 = OnboarderPage(
-                title = "TITLE1",
-                description = "DESC1",
-                resourceId = R.drawable.res1,
-                isLottie = true,
-        )
-
-        val onboarderPage2 = OnboarderPage(
-                title = "TITLE2",
-                description = "DESC2",
-                resourceId = R.drawable.res2
-        )
-
-        val onboarderPage3 = OnboarderPage(
-                "Mars",
-                "Say hi to Curiosity!",
-                resourceId = R.drawable.third
-        )
-
-        onboarderPage1.backgroundColor = R.color.color1
-        onboarderPage2.backgroundColor = R.color.color2
-        onboarderPage3.backgroundColor = R.color.color3
-
-        val pages: MutableList<OnboarderPage> = ArrayList()
-        pages.add(onboarderPage1)
-        pages.add(onboarderPage2)
-        pages.add(onboarderPage3)
-
-        for (page in pages) {
-            page.titleColor = R.color.primary_text
-            page.descriptionColor = R.color.secondary_text
-            page.isMultilineDescriptionCentered = true
-        }
-```
+## Inspired by AppIntro(https://github.com/AppIntro/AppIntro)
 
 ## Contribution
 
