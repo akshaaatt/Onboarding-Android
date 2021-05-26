@@ -80,6 +80,41 @@ Finally, declare the activity in your Manifest like so:
     
 We suggest to don't declare MyCustomOnboard as your first Activity unless you want the intro to launch every time your app starts. Ideally you should show the OnboardAdvanced activity only once to the user, and you should hide it once completed (you can use a flag in the SharedPreferences).
 
+## Creating Slides 👩‍🎨
+
+The entry point to add a new slide is the `addSlide(fragment: Fragment)` function on the `OnboardAdvanced` or `OnboardLegacy` class.
+You can easily use it to add a new `Fragment` to the carousel.
+
+The library comes with several util classes to help you create your Slide with just a couple lines:
+
+### `OnboardFragment`
+
+You can use the `OnboardFragment` if you just want to customize title, description, image and colors.
+That's the suggested approach if you want to create a quick intro:
+
+```kotlin
+addSlide(OnboardFragment.newInstance(
+    title = "The title of your slide",
+    description = "A description that will be shown on the bottom",
+    resourceId = R.drawable.the_central_icon, //or R.raw.your_json for LottieAnimationView
+    backgroundDrawable = R.drawable.the_background_image,
+    titleColor = Color.YELLOW,
+    descriptionColor = Color.RED,
+    backgroundColor = Color.BLUE,
+    titleTypefaceFontRes = R.font.opensans_regular,
+    descriptionTypefaceFontRes = R.font.opensans_regular,
+    isLottie = true //To hide the imageView and enable the LottieAnimationView
+))
+```
+
+All the parameters are optional, so you're free to customize your slide as you wish.
+
+If you need to programmatically create several slides you can also use the `SliderPage` class.
+This class can be passed to `OnboardFragment.newInstance(sliderPage: SliderPage)` that will create
+a new slide starting from that instance.
+
+#### Refer the sample code provided in this repository.
+
 #### Inspired by [AppIntro](https://github.com/AppIntro/AppIntro)
 
 ## Contribution
