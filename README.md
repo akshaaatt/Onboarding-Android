@@ -30,6 +30,7 @@ dependencies {
     implementation 'com.github.akshaaatt:Onboarding:1.0.0'
 }
 ```
+
 ## Basic usage
 
 To use Onboarder, you simply have to create a new Activity that extends OnboardAdvanced or OnboardLegacy like the following:
@@ -72,8 +73,10 @@ Also confirm that you're overriding onCreate with a single parameter (Bundle) an
 
 Finally, declare the activity in your Manifest like so:
 
+```
 <activity android:name="com.example.MyCustomOnboard"
     android:label="My Custom Onboard" />
+```
     
 We suggest to don't declare MyCustomOnboard as your first Activity unless you want the intro to launch every time your app starts. Ideally you should show the OnboardAdvanced activity only once to the user, and you should hide it once completed (you can use a flag in the SharedPreferences).
 
