@@ -127,6 +127,8 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
             animationView.setAnimation(resourceId)
         }
         else{
+            slideImage.visibility = VISIBLE
+            animationView.visibility = GONE
             slideImage.setImageResource(resourceId)
         }
         titleTypeface?.applyTo(titleText)
@@ -169,6 +171,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
         outState.putInt(ARG_BG_COLOR, defaultBackgroundColor)
         outState.putInt(ARG_TITLE_COLOR, titleColor)
         outState.putInt(ARG_DESC_COLOR, descColor)
+        outState.putBoolean(IS_LOTTIE,isLottie)
         if (titleTypeface != null) {
             outState.putString(ARG_TITLE_TYPEFACE, titleTypeface?.typeFaceUrl)
             outState.putInt(ARG_TITLE_TYPEFACE_RES, titleTypeface?.typeFaceResource ?: 0)
