@@ -7,7 +7,7 @@ Onboarder is an Android library for easing up the onboarding process to Apps.
 
 * Written in Kotlin
 * No boilerplate code
-* Easy initialisation
+* Easy initialization
 * Supports Lottie Animation View and Images with a Title and Description.
 
 ## Gradle Dependency
