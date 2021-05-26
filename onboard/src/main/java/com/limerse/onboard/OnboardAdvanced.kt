@@ -39,8 +39,8 @@ abstract class OnboardAdvanced : com.limerse.onboard.OnboardBase() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         backgroundFrame = findViewById(R.id.background)
-        bottomBar = findViewById(com.limerse.onboard.R.id.bottom)
-        skipImageButton = findViewById(com.limerse.onboard.R.id.skip)
+        bottomBar = findViewById(R.id.bottom)
+        skipImageButton = findViewById(R.id.skip)
         if (isRtl) {
             skipImageButton.scaleX = -1F
         }
@@ -68,7 +68,7 @@ abstract class OnboardAdvanced : com.limerse.onboard.OnboardBase() {
      * @param color your color
      */
     fun setNextArrowColor(@ColorInt color: Int) {
-        val nextButton = findViewById<ImageButton>(com.limerse.onboard.R.id.next)
+        val nextButton = findViewById<ImageButton>(R.id.next)
         nextButton.setColorFilter(color)
     }
 
@@ -78,7 +78,7 @@ abstract class OnboardAdvanced : com.limerse.onboard.OnboardBase() {
      * @param colorSkipButton your color resource
      */
     fun setSkipArrowColor(@ColorInt colorSkipButton: Int) {
-        val skip = findViewById<ImageButton>(com.limerse.onboard.R.id.skip)
+        val skip = findViewById<ImageButton>(R.id.skip)
         skip.setColorFilter(colorSkipButton)
     }
 }

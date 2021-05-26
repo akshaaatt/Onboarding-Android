@@ -14,46 +14,48 @@ class IntroActivity : OnboardAdvanced() {
         addSlide(
             OnboardFragment.newInstance(
             "Welcome!",
-            "This is a demo of the Onboard library, using the second layout.",
-            resourceId = R.raw.music,
-            backgroundDrawable = R.drawable.back_slide1,
+            "Ever wondered what was missing in your life?",
+            resourceId = R.raw.teen,
             titleTypefaceFontRes = R.font.lato,
             descriptionTypefaceFontRes = R.font.lato,
-            isLottie = true
+                backgroundDrawable = R.drawable.back_slide2,
+                isLottie = true
         ))
 
         addSlide(OnboardFragment.newInstance(
             SliderPage(
-            "Gradients!",
-            "This text is written on a gradient background",
-            resourceId = R.drawable.ic_slide2,
-            backgroundDrawable = R.drawable.back_slide2,
+            "Tired of Searching?",
+            "Congratulations, you are at the right place!",
+            resourceId = R.raw.location,
+            backgroundDrawable = R.drawable.back_slide1,
             titleTypeface = "OpenSans-Light.ttf",
-            descriptionTypeface = "OpenSans-Light.ttf"
+            descriptionTypeface = "OpenSans-Light.ttf",
+                isLottie = true
         )
         ))
 
         addSlide(OnboardFragment.newInstance(
-            "Simple, yet Customizable",
-            "The library offers a lot of customization, while keeping it simple for those that like simple.",
-            resourceId = R.drawable.ic_slide3,
+            "Meet, Code and Discuss",
+            "Connect with the community of fierce developers!",
+            resourceId = R.raw.rocket,
             backgroundDrawable = R.drawable.back_slide3,
             titleTypefaceFontRes = R.font.opensans_regular,
-            descriptionTypefaceFontRes = R.font.opensans_regular
+            descriptionTypefaceFontRes = R.font.opensans_regular,
+            isLottie = true
         ))
 
         addSlide(OnboardFragment.newInstance(
-            "Explore",
-            "Feel free to explore the rest of the library demo!",
-            resourceId = R.drawable.ic_slide4,
-            backgroundDrawable = R.drawable.back_slide4
+            "Explore and Learn",
+            "Contribute to the community and build your reputation!",
+            resourceId = R.raw.trophy,
+            backgroundDrawable = R.drawable.back_slide4,
+            isLottie = true
         ))
 
         addSlide(OnboardFragment.newInstance(
-            ":)",
-            "...gradients are awesome!",
-            resourceId = R.mipmap.ic_launcher,
-            backgroundDrawable = R.drawable.back_slide5
+            "Are you ready?",
+            "Join us, support us and become a part of us!",
+            resourceId = R.drawable.metabrainz,
         ))
 
         setTransformer(OnboardPageTransformerType.Parallax())
