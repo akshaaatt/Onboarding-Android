@@ -35,7 +35,7 @@ class OnboardFragment : OnboardBaseFragment() {
         fun newInstance(
             title: CharSequence? = null,
             description: CharSequence? = null,
-            @DrawableRes resourceId: Int = 0,
+            resourceId: Int = 0,
             @ColorInt backgroundColor: Int = 0,
             @ColorInt titleColor: Int = 0,
             @ColorInt descriptionColor: Int = 0,

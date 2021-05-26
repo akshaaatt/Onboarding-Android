@@ -2,12 +2,12 @@ package com.limerse.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.limerse.onboard.Onboard2
+import com.limerse.onboard.OnboardAdvanced
 import com.limerse.onboard.OnboardFragment
 import com.limerse.onboard.OnboardPageTransformerType
 import com.limerse.onboard.model.SliderPage
 
-class IntroActivity : Onboard2() {
+class IntroActivity : OnboardAdvanced() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -15,7 +15,7 @@ class IntroActivity : Onboard2() {
             OnboardFragment.newInstance(
             "Welcome!",
             "This is a demo of the Onboard library, using the second layout.",
-            resourceId = R.drawable.ic_slide1,
+            resourceId = R.raw.music,
             backgroundDrawable = R.drawable.back_slide1,
             titleTypefaceFontRes = R.font.lato,
             descriptionTypefaceFontRes = R.font.lato,
@@ -55,7 +55,6 @@ class IntroActivity : Onboard2() {
             resourceId = R.mipmap.ic_launcher,
             backgroundDrawable = R.drawable.back_slide5
         ))
-
 
         setTransformer(OnboardPageTransformerType.Parallax())
     }

@@ -26,7 +26,7 @@ import com.limerse.onboard.IS_LOTTIE
 data class SliderPage @JvmOverloads constructor(
     var title: CharSequence? = null,
     var description: CharSequence? = null,
-    @DrawableRes var resourceId: Int = 0,
+    var resourceId: Int = 0,
     @ColorInt var backgroundColor: Int = 0,
     @ColorInt var titleColor: Int = 0,
     @ColorInt var descriptionColor: Int = 0,

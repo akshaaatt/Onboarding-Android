@@ -37,7 +37,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
     @get:LayoutRes
     protected abstract val layoutId: Int
 
-    private var drawable: Int = 0
+    private var resourceId: Int = 0
     private var bgDrawable: Int = 0
 
     private var titleColor: Int = 0
@@ -57,7 +57,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
 
         val args = arguments
         if (args != null && args.size() != 0) {
-            drawable = args.getInt(ARG_DRAWABLE)
+            resourceId = args.getInt(ARG_DRAWABLE)
             title = args.getString(ARG_TITLE)
             description = args.getString(ARG_DESC)
             bgDrawable = args.getInt(ARG_BG_DRAWABLE)
@@ -80,7 +80,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
         super.onActivityCreated(savedInstanceState)
 
         if (savedInstanceState != null) {
-            drawable = savedInstanceState.getInt(ARG_DRAWABLE)
+            resourceId = savedInstanceState.getInt(ARG_DRAWABLE)
             title = savedInstanceState.getString(ARG_TITLE)
             description = savedInstanceState.getString(ARG_DESC)
             isLottie = savedInstanceState.getBoolean(IS_LOTTIE)
@@ -124,9 +124,10 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
         if(isLottie){
             slideImage.visibility = GONE
             animationView.visibility = VISIBLE
+            animationView.setAnimation(resourceId)
         }
         else{
-            slideImage.setImageResource(drawable)
+            slideImage.setImageResource(resourceId)
         }
         titleTypeface?.applyTo(titleText)
         descTypeface?.applyTo(descriptionText)
@@ -161,7 +162,7 @@ abstract class OnboardBaseFragment : Fragment(), SlideSelectionListener, SlideBa
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putInt(ARG_DRAWABLE, drawable)
+        outState.putInt(ARG_DRAWABLE, resourceId)
         outState.putInt(ARG_BG_DRAWABLE, bgDrawable)
         outState.putString(ARG_TITLE, title)
         outState.putString(ARG_DESC, description)

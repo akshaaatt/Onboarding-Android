@@ -12,7 +12,7 @@ import androidx.annotation.StyleRes
 import androidx.core.widget.TextViewCompat
 import com.limerse.onboard.internal.TypefaceContainer
 
-abstract class Onboard : com.limerse.onboard.OnboardBase() {
+abstract class OnboardLegacy : com.limerse.onboard.OnboardBase() {
 
     override val layoutId = R.layout.onboard_intro_layout
 

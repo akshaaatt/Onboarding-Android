@@ -9,7 +9,7 @@ import androidx.annotation.ColorInt
 import androidx.annotation.IdRes
 import androidx.constraintlayout.widget.ConstraintLayout
 
-abstract class Onboard2 : com.limerse.onboard.OnboardBase() {
+abstract class OnboardAdvanced : com.limerse.onboard.OnboardBase() {
 
     override val layoutId = R.layout.onboard_intro_layout2
 
