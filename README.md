@@ -1,3 +1,24 @@
+<h1 align="center">Onboarding</h1>
+
+<p align="center">
+    <img src="https://PlayBadges.pavi2410.me/badge/downloads?id=com.limerse.social">
+    <img src="https://PlayBadges.pavi2410.me/badge/ratings?id=com.limerse.social">
+    <a href="https://github.com/akshaaatt/Onboarding/commits/master">
+    <img src="https://img.shields.io/github/last-commit/akshaaatt/Onboarding.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub last commit">
+    <a href="https://github.com/akshaaatt/Onboarding/issues">
+    <img src="https://img.shields.io/github/issues-raw/akshaaatt/Onboarding.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub issues">
+    <a href="https://github.com/akshaaatt/Onboarding/pulls">
+    <img src="https://img.shields.io/github/issues-pr-raw/akshaaatt/Onboarding.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub pull requests">
+</p>
+      
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#contribution">Contribution</a>
+</p>
+
 [![Screenshot-2021-05-26-23-40-20-876-com-limerse-onboarding.jpg](https://i.postimg.cc/3wK25pJJ/Screenshot-2021-05-26-23-40-20-876-com-limerse-onboarding.jpg)](https://postimg.cc/zycyTyg9)
 [![ezgif-com-gif-maker-1.gif](https://i.postimg.cc/yxqFGGD2/ezgif-com-gif-maker-1.gif)](https://postimg.cc/Q9b990kq)
 
