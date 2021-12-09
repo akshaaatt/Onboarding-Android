@@ -1,8 +1,8 @@
 <h1 align="center">Onboarding</h1>
 
 <p align="center">
-    <img src="https://PlayBadges.pavi2410.me/badge/downloads?id=com.limerse.social">
-    <img src="https://PlayBadges.pavi2410.me/badge/ratings?id=com.limerse.social">
+    <img src="https://PlayBadges.pavi2410.me/badge/downloads?id=com.redalck.gameone">
+    <img src="https://PlayBadges.pavi2410.me/badge/ratings?id=com.redalck.gameone">
     <a href="https://github.com/akshaaatt/Onboarding/commits/master">
     <img src="https://img.shields.io/github/last-commit/akshaaatt/Onboarding.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub last commit">
