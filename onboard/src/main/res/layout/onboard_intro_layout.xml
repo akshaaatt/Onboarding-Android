@@ -8,7 +8,7 @@
     android:fitsSystemWindows="false"
     android:theme="@style/OnboardStyle">
 
-    <com.limerse.onboard.internal.OnboardViewPager
+    <com.aemerse.onboard.internal.OnboardViewPager
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
