@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/onboard2_bottombar_height"
         android:background="@color/onboard_bar_color"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -32,7 +32,7 @@
         android:id="@+id/skip"
         style="@style/Onboard2ButtonStyleCompat"
         android:contentDescription="@string/onboard_skip_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom"
         app:srcCompat="@drawable/ic_onboard_fab_skip" />
@@ -51,7 +51,7 @@
         android:id="@+id/indicator_container"
         style="@style/OnboardIndicatorContainer"
         android:layoutDirection="ltr"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom"
@@ -62,7 +62,7 @@
         android:id="@+id/next"
         style="@style/Onboard2ButtonStyleCompat"
         android:contentDescription="@string/onboard_next_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom"
         app:srcCompat="@drawable/ic_onboard_fab_next" />
@@ -72,9 +72,19 @@
         style="@style/Onboard2ButtonStyleCompat"
         android:contentDescription="@string/onboard_done_button"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom"
         app:srcCompat="@drawable/ic_onboard_fab_done" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:padding="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

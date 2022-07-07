@@ -1,6 +1,7 @@
 package com.aemerse.onboarding
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.aemerse.onboard.OnboardAdvanced
 import com.aemerse.onboard.OnboardFragment
@@ -11,6 +12,7 @@ class IntroActivity : OnboardAdvanced() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setSignInButton(false)
         addSlide(
             OnboardFragment.newInstance(
             "Welcome!",
@@ -61,13 +63,18 @@ class IntroActivity : OnboardAdvanced() {
         setTransformer(OnboardPageTransformerType.Parallax())
     }
 
-    public override fun onSkipPressed(currentFragment: Fragment?) {
+    override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
-        finish()
+        Toast.makeText(applicationContext, "Skip pressed", Toast.LENGTH_SHORT).show()
     }
 
-    public override fun onDonePressed(currentFragment: Fragment?) {
+    override fun onSignInPressed(currentFragment: Fragment?) {
+        super.onSignInPressed(currentFragment)
+        Toast.makeText(applicationContext, "Sign In pressed", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
-        finish()
+        Toast.makeText(applicationContext, "Done pressed", Toast.LENGTH_SHORT).show()
     }
 }
