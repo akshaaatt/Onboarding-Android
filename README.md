@@ -35,7 +35,7 @@ Onboarder is an Android library for easing up the onboarding process to Apps.
 
 * Add the JitPack repository to your project's build.gradle file
 
-```
+```groovy
 allprojects {
     repositories {
         ...
@@ -46,7 +46,7 @@ allprojects {
 
 * Add the dependency in your app's build.gradle file
 
-```
+```groovy
 dependencies {
     implementation 'com.github.akshaaatt:Onboarding:1.0.4'
 }
