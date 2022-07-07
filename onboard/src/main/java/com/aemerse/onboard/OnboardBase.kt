@@ -112,6 +112,7 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
     private lateinit var doneButton: View
     private lateinit var skipButton: View
     private lateinit var backButton: View
+    private lateinit var signInButton: View
     private lateinit var indicatorContainer: ViewGroup
 
     // Asks the ViewPager for the current slide number. Useful to query the [permissionsMap]
@@ -362,6 +363,9 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
     /** Called when the user clicked the skip button */
     protected open fun onSkipPressed(currentFragment: Fragment?) {}
 
+    /** Called when the user clicked the sign in button */
+    protected open fun onSignInPressed(currentFragment: Fragment?) {}
+
     /** Called when the user request to go to the next slide either
      *  via keyboard (Enter, etc.) or via button */
     protected open fun onNextSlide() {}
@@ -401,6 +405,7 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
         doneButton = findViewById(R.id.done) ?: error("Missing Done button: R.id.done")
         skipButton = findViewById(R.id.skip) ?: error("Missing Skip button: R.id.skip")
         backButton = findViewById(R.id.back) ?: error("Missing Back button: R.id.back")
+        signInButton = findViewById(R.id.sign_in_button) ?: error("Missing Sign In button: R.id.sign_in_button")
 
         setTooltipText(nextButton, getString(R.string.onboard_next_button))
         if (skipButton is ImageButton) {
@@ -429,6 +434,9 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
         skipButton.setOnClickListener {
             dispatchVibration()
             onSkipPressed(pagerAdapter.getItem(pager.currentItem))
+        }
+        signInButton.setOnClickListener {
+            onSignInPressed(pagerAdapter.getItem(pager.currentItem))
         }
 
         pager.adapter = this.pagerAdapter

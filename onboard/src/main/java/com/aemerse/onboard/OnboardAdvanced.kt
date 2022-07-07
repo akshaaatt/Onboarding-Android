@@ -4,10 +4,13 @@ import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.ImageButton
 import androidx.annotation.ColorInt
 import androidx.annotation.IdRes
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.gms.common.SignInButton
 
 abstract class OnboardAdvanced : com.aemerse.onboard.OnboardBase() {
 
@@ -35,12 +38,14 @@ abstract class OnboardAdvanced : com.aemerse.onboard.OnboardBase() {
     private lateinit var backgroundFrame: ConstraintLayout
     private lateinit var bottomBar: View
     private lateinit var skipImageButton: ImageButton
+    private lateinit var googleSignInButton: SignInButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         backgroundFrame = findViewById(R.id.background)
         bottomBar = findViewById(R.id.bottom)
         skipImageButton = findViewById(R.id.skip)
+        googleSignInButton = findViewById(R.id.sign_in_button)
         if (isRtl) {
             skipImageButton.scaleX = -1F
         }
@@ -52,6 +57,17 @@ abstract class OnboardAdvanced : com.aemerse.onboard.OnboardBase() {
      */
     fun setBarColor(@ColorInt color: Int) {
         bottomBar.setBackgroundColor(color)
+    }
+
+    fun setSignInButton(show: Boolean){
+        when {
+            show -> {
+                googleSignInButton.visibility = VISIBLE
+            }
+            else -> {
+                googleSignInButton.visibility = GONE
+            }
+        }
     }
 
     /**
