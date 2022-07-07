@@ -48,7 +48,7 @@ allprojects {
 
 ```
 dependencies {
-    implementation 'com.github.akshaaatt:Onboarding:1.0.3'
+    implementation 'com.github.akshaaatt:Onboarding:1.0.4'
 }
 ```
 
