@@ -19,7 +19,7 @@
   <a href="#contribution">Contribution</a>
 </p>
 
-[![Screenshot-2021-05-26-23-40-20-876-com-aemerse-onboarding.jpg](https://i.postimg.cc/3wK25pJJ/Screenshot-2021-05-26-23-40-20-876-com-aemerse-onboarding.jpg)](https://postimg.cc/zycyTyg9)
+[![Screenshot-2021-05-26-23-40-20-876-com-limurse-onboarding.jpg](https://i.postimg.cc/3wK25pJJ/Screenshot-2021-05-26-23-40-20-876-com-limurse-onboarding.jpg)](https://postimg.cc/zycyTyg9)
 [![ezgif-com-gif-maker-1.gif](https://i.postimg.cc/yxqFGGD2/ezgif-com-gif-maker-1.gif)](https://postimg.cc/Q9b990kq)
 
 Onboarder is an Android library for easing up the onboarding process to Apps.

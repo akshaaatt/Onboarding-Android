@@ -13,6 +13,7 @@ android {
         consumerProguardFiles 'consumer-proguard-rules.pro'
         vectorDrawables.useSupportLibrary = true
     }
+    namespace 'com.limurse.onboard'
 }
 
 dependencies {
@@ -35,7 +36,7 @@ afterEvaluate {
                 from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'com.aemerse'
+                groupId = 'com.limurse'
                 artifactId = 'Omboard'
                 version = '1.0.4'
             }

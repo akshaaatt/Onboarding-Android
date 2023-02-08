@@ -1,1 +1,1 @@
--keep class com.aemerse.onboard.** {*;}
+-keep class com.limurse.onboard.** {*;}
