@@ -551,18 +551,21 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
      =================================== */
 
     private fun updateButtonsVisibility() {
-        if (isButtonsEnabled) {
-            val isLastSlide = pager.isLastSlide(fragments.size)
-            val isFirstSlide = pager.isFirstSlide(fragments.size)
-            nextButton.isVisible = !isLastSlide
-            doneButton.isVisible = isLastSlide
-            skipButton.isVisible = isSkipButtonEnabled && !isLastSlide
-            backButton.isVisible = isWizardMode && !isFirstSlide
-        } else {
-            nextButton.isVisible = false
-            doneButton.isVisible = false
-            backButton.isVisible = false
-            skipButton.isVisible = false
+        when {
+            isButtonsEnabled -> {
+                val isLastSlide = pager.isLastSlide(fragments.size)
+                val isFirstSlide = pager.isFirstSlide(fragments.size)
+                nextButton.isVisible = !isLastSlide
+                doneButton.isVisible = isLastSlide
+                skipButton.isVisible = isSkipButtonEnabled && !isLastSlide
+                backButton.isVisible = isWizardMode && !isFirstSlide
+            }
+            else -> {
+                nextButton.isVisible = false
+                doneButton.isVisible = false
+                backButton.isVisible = false
+                skipButton.isVisible = false
+            }
         }
     }
 

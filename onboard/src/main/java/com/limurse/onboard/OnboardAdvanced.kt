@@ -12,7 +12,7 @@ import androidx.annotation.IdRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.gms.common.SignInButton
 
-abstract class OnboardAdvanced : com.limurse.onboard.OnboardBase() {
+abstract class OnboardAdvanced : OnboardBase() {
 
     override val layoutId = R.layout.onboard_intro_layout2
 
@@ -29,9 +29,7 @@ abstract class OnboardAdvanced : com.limurse.onboard.OnboardBase() {
         set(value) {
             field = value
             if (field != null) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    backgroundFrame.background = field
-                }
+                backgroundFrame.background = field
             }
         }
 

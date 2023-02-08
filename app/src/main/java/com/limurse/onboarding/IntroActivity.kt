@@ -1,5 +1,6 @@
 package com.limurse.onboarding
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -13,6 +14,25 @@ class IntroActivity : OnboardAdvanced() {
         super.onCreate(savedInstanceState)
 
         setSignInButton(false)
+        isWizardMode = true
+        val permissions = when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> {
+                listOf(
+                    android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                    android.Manifest.permission.POST_NOTIFICATIONS
+                )
+            }
+            else -> {
+                listOf(android.Manifest.permission.ACCESS_COARSE_LOCATION)
+            }
+        }
+
+        askForPermissions(
+            permissions = permissions.toTypedArray(),
+            slideNumber = 2,
+            required = true
+        )
+
         addSlide(OnboardFragment.newInstance(
             "Welcome!",
             "Ever wondered what was missing in your life?",
