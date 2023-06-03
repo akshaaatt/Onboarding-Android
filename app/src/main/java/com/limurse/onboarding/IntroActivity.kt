@@ -27,6 +27,10 @@ class IntroActivity : OnboardAdvanced() {
             }
         }
 
+        // Hide/Show the status Bar
+        showStatusBar(true)
+        setStatusBarColorRes(R.color.onboarder_bg_1)
+
         askForPermissions(
             permissions = permissions.toTypedArray(),
             slideNumber = 2,
