@@ -13,7 +13,7 @@ class IntroActivity : OnboardAdvanced() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setSignInButton(false)
+        showSignInButton = true
         isWizardMode = true
         val permissions = when {
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> {

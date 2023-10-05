@@ -72,6 +72,14 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
             updateButtonsVisibility()
         }
 
+    /** Toggles the Sign in mode (sign in button instead of done on last slide). */
+    protected var showSignInButton: Boolean = false
+        set(value) {
+            field = value
+            this.isSkipButtonEnabled = !value
+            updateButtonsVisibility()
+        }
+
     /** Toggles the [IndicatorController] visibility. */
     protected var isIndicatorEnabled = true
         set(value) {
@@ -556,7 +564,8 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
                 val isLastSlide = pager.isLastSlide(fragments.size)
                 val isFirstSlide = pager.isFirstSlide(fragments.size)
                 nextButton.isVisible = !isLastSlide
-                doneButton.isVisible = isLastSlide
+                doneButton.isVisible = isLastSlide && !showSignInButton
+                signInButton.isVisible = isLastSlide && showSignInButton
                 skipButton.isVisible = isSkipButtonEnabled && !isLastSlide
                 backButton.isVisible = isWizardMode && !isFirstSlide
             }
@@ -565,6 +574,7 @@ abstract class OnboardBase : AppCompatActivity(), OnboardViewPagerListener {
                 doneButton.isVisible = false
                 backButton.isVisible = false
                 skipButton.isVisible = false
+                signInButton.isVisible = false
             }
         }
     }

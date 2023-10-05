@@ -5,4 +5,6 @@
     <string name="onboard_back_button" tools:ignore="MissingTranslation">BACK</string>
     <string name="onboard_done_button">DONE</string>
     <string name="onboard_image_content_description" tools:ignore="MissingTranslation">graphics</string>
+    <string name="sign_in">Sign in</string>
+    <string name="onboard_sign_in_button">Sign in</string>
 </resources>
