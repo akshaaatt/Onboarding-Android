@@ -80,10 +80,11 @@
 
     <Button
         android:id="@+id/sign_in_button"
-        android:layout_height="60dp"
-        android:layout_width="80dp"
-        android:layout_margin="12dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/sign_in"
+        android:textColor="@color/white"
         android:contentDescription="@string/onboard_sign_in_button"
         android:background="@drawable/rounded_button"
         android:visibility="gone"

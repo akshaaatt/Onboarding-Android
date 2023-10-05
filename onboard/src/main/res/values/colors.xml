@@ -12,4 +12,5 @@
     <color name="onboard_default_selected_color">#FFFFFF</color>
     <color name="onboard_navbar_color">#000000</color>
     <color name="onboard_ripple_color">#1FFFFFFF</color>
+    <color name="white">#FFFFFF</color>
 </resources>
