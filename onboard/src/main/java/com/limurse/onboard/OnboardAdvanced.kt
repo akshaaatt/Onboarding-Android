@@ -56,6 +56,10 @@ abstract class OnboardAdvanced : OnboardBase() {
         bottomBar.setBackgroundColor(color)
     }
 
+    fun setSignInButtonColor(@ColorInt color : Int) {
+        signInButton.setBackgroundColor(color)
+    }
+
     fun setSignInButton(show: Boolean){
         when {
             show -> {
@@ -66,6 +70,8 @@ abstract class OnboardAdvanced : OnboardBase() {
             }
         }
     }
+
+
 
     /**
      * Override Skip button drawable
