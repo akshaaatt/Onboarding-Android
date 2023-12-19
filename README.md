@@ -2,7 +2,6 @@
 
 <p align="center">
     <img src="https://PlayBadges.pavi2410.me/badge/downloads?id=com.redalck.gameone">
-    <img src="https://PlayBadges.pavi2410.me/badge/ratings?id=com.redalck.gameone">
     <a href="https://github.com/akshaaatt/Onboarding/commits/master">
     <img src="https://img.shields.io/github/last-commit/akshaaatt/Onboarding.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub last commit">
@@ -48,7 +47,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.akshaaatt:Onboarding:1.0.4'
+    implementation 'com.github.akshaaatt:Onboarding:1.1.3'
 }
 ```
 
