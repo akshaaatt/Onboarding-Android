@@ -30,7 +30,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.7.1'
     implementation 'com.airbnb.android:lottie:6.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.android.gms:play-services-base:18.2.0'
+    implementation 'com.google.android.gms:play-services-base:18.3.0'
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.mockito:mockito-core:5.8.0'
